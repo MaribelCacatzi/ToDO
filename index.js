@@ -16,14 +16,15 @@ const agregar = (event) =>{
     let input = document.createElement('input')
     input.value=inputTask.value
     inputTask.value=''
+    input.classList.add('w-75')
     let btn1 = document.createElement('button')
-    btn1.classList.add('btn','btn-danger','mx-2')
+    btn1.classList.add('btn','btn-danger','mx-2','fw-bold')
     btn1.innerText= 'Eliminar'
     btn1.addEventListener('click', () => {
         li.remove()
     })
     let btn2 = document.createElement('button')
-    btn2.classList.add('btn','btn-primary')
+    btn2.classList.add('btn','btn-success', 'fw-bold')
     btn2.innerText= 'Completado'
     btn2.addEventListener('click', ()=>{
         input.classList.add('text-decoration-line-through')
