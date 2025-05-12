@@ -39,13 +39,20 @@ const agregar = (event) =>{
 }
 
 botton.addEventListener('click',(event) => {
-    agregar(event)
-})
-
-input.addEventListener('keydown',(event)=>{
-    if (event.key == 'Enter'){
+    if(input.value==''){
+        alert('Debe ingresar una tarea')
+    }else{
         agregar(event)
     }
 })
 
+input.addEventListener('keydown',(event)=>{
+    if (event.key == 'Enter'){
+        if(input.value==''){
+            alert('Debe ingresar una tarea')
+        }else{
+            agregar(event)
+        }
+    }
+})
 
